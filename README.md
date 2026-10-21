@@ -1,30 +1,31 @@
-# Public Actions Lab — synthetic tests only
+# Public Actions Lab
 
-This directory is a **standalone, public-safe repository starter**.
-Its purpose is to verify whether GitHub-hosted Actions runners can execute in a
-**separately created public repository**, without publishing private projects.
+A small, **synthetic-only** GitHub Actions diagnostic laboratory. It contains no private application, account information, music library, repository history or credentials.
 
-## What this repository can prove
-- A public workflow can start a GitHub-hosted Linux runner.
-- A simple, synthetic data validator behaves correctly.
-- The public fixture has no dependency on any other repository or account.
+## What it tests
 
-## What it cannot prove
-- Private repositories have available Actions minutes or working billing settings.
-- A private workflow will run successfully.
-- A private application, its data, or its production deployment has been tested.
+The `Public synthetic smoke` workflow attempts to start a GitHub-hosted Ubuntu runner, checks an allowlist of files and basic secret signatures, then runs six unit tests using made-up task identifiers.
 
-## Setup
-1. Create a NEW **public** repository with this directory's files at the repository root.
-2. Verify there are **no extra files or history copied from private repositories**.
-3. Push the public-safe files only. The workflow runs on pushes or manually.
-4. Check Actions for success or runner-level failure.
-5. Do not add real identities, messages, datasets, backups, credentials, URLs,
-   reusable private workflows, or private repository access tokens.
+## Run
 
-## Running locally
-`node scripts/check-public-safe.mjs`
-`node --test`
+- CI: open the repository's **Actions** tab and select `Public synthetic smoke`.
+- Local: `node scripts/check-public-safe.mjs` and `node --test` (Node 22 recommended).
 
-Uses built-in Node.js APIs; no npm dependencies, connected apps or tokens.
-The public runner diagnostic is independent from any private application.
+No npm packages, tokens, secrets, production endpoints or external connections are required.
+
+## Limits
+
+A successful public runner **does not prove** GitHub Actions will work in private repositories, nor does it validate any private application's behavior, security or deployment. This repository is intentionally not integrated with private workflows.
+
+## Public safety contract
+
+Only these six files may be present:
+
+- `README.md`
+- `.github/workflows/public-smoke.yml`
+- `fixtures/sample.json`
+- `scripts/check-public-safe.mjs`
+- `src/validator.mjs`
+- `test/validator.test.mjs`
+
+Never copy anything else here or include personal records, real music data, application files, tokens, private commits, backups or Git history. The checker is a supplementary guard, not a proof of privacy.
