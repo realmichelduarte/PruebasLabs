@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "periods": [
+    {
+      "id": "sample-1",
+      "label": "Sample interval 1"
+    },
+    {
+      "id": "sample-2",
+      "label": "Sample interval 2"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "fixture-a",
+      "period_id": "sample-1",
+      "status": "proposed"
+    },
+    {
+      "id": "fixture-b",
+      "period_id": "sample-2",
+      "status": "done"
+    }
+  ]
+}
