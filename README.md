@@ -29,3 +29,9 @@ Only these six files may be present:
 - `test/validator.test.mjs`
 
 Never copy anything else here or include personal records, real music data, application files, tokens, private commits, backups or Git history. The checker is a supplementary guard, not a proof of privacy.
+
+## Synthetic cross-area contract (expanded lab, 2026-10-23)
+
+Eight extra tests use **made-up goal IDs, opportunity records, question references and unknown progress** to exercise generic integrity rules: projection equality, snapshot equality, deduplication and no fabricated completion. No real private repository is cloned, mounted, referenced by name, or granted a token. The public workflow can validate **this synthetic contract only**; separate authenticated GitHub checks are still required to validate actual private records. Public Actions cannot start or debug a private hosted runner by themselves. This setup never authorizes opening private repositories, hosting sensitive data or spending money.
+
+**Results:** GitHub Actions > `Public synthetic smoke`. A passing run means the artificial validators worked; it is not an approval of any private Master Plan deployment.

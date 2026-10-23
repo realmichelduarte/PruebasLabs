@@ -21,5 +21,79 @@
       "period_id": "sample-2",
       "status": "done"
     }
-  ]
+  ],
+  "synthetic_bridge": {
+    "schema_version": 1,
+    "source": {
+      "goals": [
+        {
+          "id": "g-alpha",
+          "title": "Sample goal A",
+          "target": 4,
+          "unit": "items",
+          "current": null
+        },
+        {
+          "id": "g-beta",
+          "title": "Sample goal B",
+          "target": 7,
+          "unit": "units",
+          "current": null
+        }
+      ]
+    },
+    "view": {
+      "goals": [
+        {
+          "id": "g-alpha",
+          "title": "Sample goal A",
+          "target": 4,
+          "unit": "items",
+          "current": null
+        },
+        {
+          "id": "g-beta",
+          "title": "Sample goal B",
+          "target": 7,
+          "unit": "units",
+          "current": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "q-alpha"
+        },
+        {
+          "id": "q-beta"
+        }
+      ]
+    },
+    "registry": {
+      "records": [
+        {
+          "id": "opp-alpha",
+          "status": "considered",
+          "sent_at": null,
+          "outcome": null
+        }
+      ]
+    },
+    "snapshot": {
+      "records": [
+        {
+          "id": "opp-alpha",
+          "status": "considered",
+          "sent_at": null,
+          "outcome": null
+        }
+      ]
+    },
+    "questions": {
+      "pending": [
+        {
+          "id": "q-alpha"
+        }
+      ]
+    }
+  }
 }
